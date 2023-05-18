@@ -13,7 +13,7 @@ public class ExpensesManager {
 
 
     double saveExpense(double moneyBeforeSalary, String category, double expense) {
-        moneyBeforeSalary = moneyBeforeSalary - expense;
+        moneyBeforeSalary -= expense;
         System.out.println("Значение сохранено! Ваш текущий баланс в рублях: " + moneyBeforeSalary);
         if (expensesByCategories.containsKey(category)) { // Проверьте наличие категории
             ArrayList<Double> spending = expensesByCategories.get(category); // Получите список трат в этой категории
